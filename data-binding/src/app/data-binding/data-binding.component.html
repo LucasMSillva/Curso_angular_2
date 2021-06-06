@@ -17,10 +17,10 @@
     </article>  -->
 
 
-        <h3>Class and Style Binding</h3>
+     <!-- <h3>Class and Style Binding</h3>
     <br>
     <br>
-  
+
         selecione uma classe: 
         <select #classe (change)="0">
             <option value="alert-success">Sucesso</option>
@@ -46,6 +46,37 @@
 
             <div class="alert alert-danger" role="alert"
             [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">esse texto so aparece se selecionar erro.</div>
+  </section> -->
 
-   
+  <section class-="event-binding">
+      <article>
+          <h3>Event Binding</h3>
+          <div>
+              <button (click)="botaoClicado()"
+               class="btn btn-primary">
+               Não aperte!
+            </button>
+
+            <br><br>
+
+            <input type="text"
+            (keyup)="onKeyUp($event)"
+            (keyup.enter)="salvarValor(campoInput.value)"
+            (blur)="salvarValor(campoInput.value)"
+            #campoInput>
+            <p> o Valor atual é: {{ valorAtual }} </p>
+            <p> o Valor salvo é: {{ valorSalvo }} </p>
+
+            <br><br>
+            <span
+                (mouseover)="onMouseOverOut()"
+                (mouseout)="onMouseOverOut()"
+                [class.highlight]="isMouseOver"
+                >
+                Passe o Mouse sobre mim.
+            </span>
+          </div>
+
+  
+      </article>
   </section>
