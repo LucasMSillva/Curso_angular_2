@@ -1,0 +1,30 @@
+<section class="porperty-binding">
+    <article>
+      <h3>Interpolation / interpolação</h3>
+      <p>String redenrizada com interpolação: {{ url }} </p>
+      <p>resultado de 1 + 1 é: {{ 1 + 1}} </p>
+      <p>resultado de 1 + 1 não é {{ 1 + 1 + getValor() }  </p>
+
+    <p> Usando uma expressão Booleana: {{ getCurtiCurso() }} </p>
+
+    <p> Usando uma expressão Booleana cursoAngular +  getCurtiCurso tem o resultado: {{ cursoAngular && getCurtiCurso() }} </p>
+    </article>
+
+    <article>
+        <h3>Porperty-binding   </h3>
+
+        <img src="{{ urlimage }} "> <!--imterpolação--> <br>
+
+        <img [src]="urlimage"> <!-- property binding,dessa forma fica mais facil para mim.--><br>
+        <img bind-src="urlimage"> <!--mesma coisa que a de cima, porem a de cima é mais pratica-->
+
+
+
+    </article>
+  </section>
+
+
+
+
+
+  <!--Por questão de facil entendimento, quando for declarar a variavel deixar um espaço antee e depois de colocar exemplo : {{assimnao}}, {{ melhor entendido }}-->
